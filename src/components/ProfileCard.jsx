@@ -31,11 +31,10 @@ const Homepage = (props) => {
               and it's honestly just really funny.
             </p>
             <p style={{paddingTop:20}}>
-              <Container style={{display:"flex", justifyContent:"center"}}>
-                <Row style={{width:"60%"}}>
+              <Container style={{display:"flex", justifyContent:"center", maxWidth: 1200}}>
+                <Row style={{width:"90%"}}>
                   <Col style={{paddingBottom:10}}><Button variant="primary">Donate</Button></Col>
-                  <Col style={{paddingBottom:10}}><Button variant="primary">Chick-Fil-A</Button></Col>
-                  <Col style={{paddingBottom:10}}><Button variant="primary">Hire Me</Button></Col>
+                  <Col style={{paddingBottom:10, minWidth:175}}><Button variant="outline-primary">Chick-Fil-A</Button></Col>
                 </Row>
               </Container>
             </p>
