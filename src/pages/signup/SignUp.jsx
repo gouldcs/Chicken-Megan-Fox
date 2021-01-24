@@ -1,13 +1,10 @@
-import React, { cloneElement } from 'react';
+import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-import MeganFox from '../../assets/meganfox.png'
-import Row from 'react-bootstrap/Row';
-import ProfileCard from '../../components/ProfileCard'
+import FirstNames from './FirstNames'
+import LastNames from './LastNames'
 import Form from 'react-bootstrap/Form'
 
 const useStyles = () => ({
@@ -22,38 +19,37 @@ const useStyles = () => ({
   },
 })
 
-function update_text() {
-  generateRandomNumber();
+function setPhoneNumber(result) {
+ return result;
 }
 
-function generateRandomNumber() {
-  const areaCode = Math.floor(Math.random() * Math.floor(999)) + 100;
-  const midNumbers = Math.floor(Math.random() * Math.floor(999));
-  const lastNumbers = Math.floor(Math.random() * Math.floor(9999));
-  const phoneNumber = "(" + areaCode + ")-" + midNumbers + "-" + lastNumbers ;
-  return phoneNumber;
-}
-
-const Homepage = (props) => {
+const Signup = (props) => {
   const classes = useStyles(props)
-  var phoneNumber = "Click 'Generate Phone Number' for your phone number."
+  const [phoneNumber, setPhoneNumber] = useState('Generate a number!')
+
+  function generateRandomNumber()  {
+  const areaCode = Math.floor(Math.random() * Math.floor(899)) + 100;
+  const midNumbers = Math.floor(Math.random() * Math.floor(899)) + 100;
+  const lastNumbers = Math.floor(Math.random() * Math.floor(8999)) + 1000;
+  const result = "(" + areaCode + ")-" + midNumbers + "-" + lastNumbers;
+  setPhoneNumber(result);
+}
 
   return (
     <div className={classes.root} id="/signup">
-      <div cardContainer style={{display: "flex", justifyContent:"center"}}>
-        <Card style={{padding: 25, width: "60%"}}>
-          <div style={{paddingLeft: 50, paddingRight: 50}}>
-          <Form.Group>
-            <Form.Control size="sm" as="select">
-              <option>First Name</option>
-            </Form.Control>
+      <div cardContainer style={{display: "flex", justifyContent:"center", paddingTop: 20}}>
+        <Card style={{padding: 25, width: "60%", minWidth: 400}}>
+          <div style={{display: "flex", justifyContent: "center", alignSelf:"center", flexDirection: "column", width:"50%", paddingBottom: 15}}>
+            <h4 style={{paddingBottom:20}}>Sign Up</h4>
+            <FirstNames />
             <br />
-            <Form.Control size="sm" as="select">
-              <option>Last Name</option>
-            </Form.Control>
-          </Form.Group>
-          <Button variant="primary" onClick={phoneNumber = this.generateRandomNumber.bind(this)}>Generate Phone Number</Button>
-          <div>Your Number: {phoneNumber}</div>
+            <LastNames />
+            <br />
+            <Card style={{paddingLeft: 10, paddingRight: 10, paddingTop:5}}>{phoneNumber}</Card>
+            <br />
+            <Button variant="primary" onClick={generateRandomNumber}>Generate Phone Number</Button>
+            <br />
+            <Button variant="outline-primary" href={"/twofa"}>Sign Up</Button>
           </div>
         </Card>
       </div>
@@ -61,4 +57,4 @@ const Homepage = (props) => {
   )
 }
 
-export default Homepage
+export default Signup

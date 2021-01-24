@@ -32,7 +32,7 @@ const Homepage = (props) => {
                 for that kind of power? Well I'll tell you what, I sure
                 am. Start by uploading your Megan Fox.
               </Card.Text>
-              <Button style={{justifySelf: "left", width:"20%"}} variant="outline-success">Upload</Button>
+              <Button style={{justifySelf: "left", width:"20%", minWidth:100}} variant="outline-success">Upload</Button>
             </Card.Body>
           </Card>
         </Row>

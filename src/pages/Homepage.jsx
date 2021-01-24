@@ -17,6 +17,8 @@ import Settings from './settings/Settings';
 import About from './about/About';
 import SignUp from './signup/SignUp';
 import ProfileCard from '../components/ProfileCard';
+import TwoFA from './twofa/TwoFA';
+import Lol from './lol/Lol';
 
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
@@ -53,6 +55,12 @@ const Homepage = (props) => {
           </Route>
           <Route exact path="/signup">
             <SignUp />
+          </Route>
+          <Route exact path="/twofa">
+            <TwoFA />
+          </Route>
+          <Route exact path="/lol">
+            <Lol />
           </Route>
         </Switch>
       </Router>

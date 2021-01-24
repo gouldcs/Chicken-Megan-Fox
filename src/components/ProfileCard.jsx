@@ -31,12 +31,16 @@ const Homepage = (props) => {
               and it's honestly just really funny.
             </p>
             <p style={{paddingTop:20}}>
-              <Container style={{display:"flex", justifyContent:"center", maxWidth: 1200}}>
-                <Row style={{width:"90%"}}>
-                  <Col style={{paddingBottom:10}}><Button variant="primary">Donate</Button></Col>
-                  <Col style={{paddingBottom:10, minWidth:175}}><Button variant="outline-primary">Chick-Fil-A</Button></Col>
-                </Row>
-              </Container>
+              <div style={{display:"flex", justifyContent:"center"}}>
+                <div style={{display:"flex", flexDirection: "row", justifyContent:"space-between", width:"40%", minWidth:225}}>
+                  <div style={{display:"flex", flexDirection:"column", paddingRight: 5}}>
+                    <Button variant="primary" href='https://cash.app/$KingCammyG'>Donate</Button>
+                  </div>
+                  <div style={{display:"flex", flexDirection:"column"}}>
+                    <Button variant="outline-primary" href='https://www.chick-fil-a.com/'>Chick-Fil-A</Button>
+                  </div>
+                </div>
+              </div>
             </p>
           </Container>
       </Jumbotron>
