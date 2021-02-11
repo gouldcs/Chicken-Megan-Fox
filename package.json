@@ -2,20 +2,6 @@
   "name": "chicken-megan-fox",
   "version": "0.1.1",
   "private": true,
-  "hosting": {
-    "public:": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "soruce": "**",
-        "destination" : "/index.html"
-      }
-    ]
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
