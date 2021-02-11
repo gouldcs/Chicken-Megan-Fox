@@ -16,7 +16,7 @@ const Settings = (props) => {
   const classes = useStyles(props)
 
   return (
-    <div className={classes.root} id="#home">
+    <div className={classes.root} id="/settings">
       <Container style={{display: "flex", justifyContent:"center"}}>
         <Row style={{width:"100%", paddingBottom: 50}}>
           <Card style={{width:"100%", minWidth: "300"}}>

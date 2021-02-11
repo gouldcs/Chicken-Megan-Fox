@@ -22,7 +22,7 @@ const Homepage = (props) => {
   const classes = useStyles(props)
 
   return (
-    <div className={classes.root} id="#home">
+    <div className={classes.root} id="/home">
       <Jumbotron className={classes.jumbo} style={{backgroundImage: `url(${Header})`, color:"#000000"}}>
         <Container>
             <h1 style={{}}>The Future of Computer Science is Here.</h1>

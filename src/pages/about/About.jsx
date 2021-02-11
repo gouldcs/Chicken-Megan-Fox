@@ -23,7 +23,7 @@ const About = (props) => {
   const classes = useStyles(props)
 
   return (
-    <div className={classes.root} id="#home">
+    <div className={classes.root} id="/about">
       <Container style={{display: "flex", justifyContent:"center"}}>
         <Row style={{width:"100%", paddingBottom: 50}}>
           <div style={{paddingTop: 25, paddingBottom: 25}}>
