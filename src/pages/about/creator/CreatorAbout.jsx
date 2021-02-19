@@ -11,7 +11,7 @@ const CreatorAbout = (props) => {
   const classes = useStyles(props)
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="/creator">
       <Card.Title style={{display:"flex", justifyContent:"flex-start"}}>About The Creator</Card.Title>
       <Card.Text style={{textAlign:"left"}}>
       My name is Cameron Gould. I am a Computer Science major at Loyola

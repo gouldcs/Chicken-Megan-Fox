@@ -34,32 +34,32 @@ const Homepage = (props) => {
   return (
     <div className={classes.root}>
       <Navbar bg="light" variant="light">
-        <Navbar.Brand href="/home/Home">Chicken Fox</Navbar.Brand>
+        <Navbar.Brand href="/home">Chicken Fox</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/home/Home">Home</Nav.Link>
-          <Nav.Link href="/about/About">About</Nav.Link>
-          <Nav.Link href="/settings/Settings">Settings</Nav.Link>
-          <Nav.Link href="/signup/SignUp">Sign Up</Nav.Link>
+          <Nav.Link href="/home">Home</Nav.Link>
+          <Nav.Link href="/about">About</Nav.Link>
+          <Nav.Link href="/settings">Settings</Nav.Link>
+          <Nav.Link href="/signup">Sign Up</Nav.Link>
         </Nav>
       </Navbar>
       <Router>
         <Switch>
-          <Route exact path="/home/Home">
+          <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/settings/Settings">
+          <Route exact path="/settings">
             <Settings />
           </Route>
-          <Route exact path="/about/About">
+          <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/signup/SignUp">
+          <Route exact path="/signup">
             <SignUp />
           </Route>
-          <Route exact path="/twofa/TwoFA">
+          <Route exact path="/twofa">
             <TwoFA />
           </Route>
-          <Route exact path="/lol/Lol">
+          <Route exact path="/lol">
             <Lol />
           </Route>
         </Switch>

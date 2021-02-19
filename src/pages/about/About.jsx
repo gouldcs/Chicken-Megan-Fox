@@ -21,6 +21,17 @@ const useStyles = () => ({
 
 const About = (props) => {
   const classes = useStyles(props)
+  const projectAbout = <ProjectAbout />
+  const creatorAbout = <CreatorAbout />
+
+  function changeActiveContent(key) {
+    if (key === "#project") {
+      return projectAbout;
+    }
+    else if (key === "#creator") {
+      return creatorAbout;
+    }
+  }
 
   return (
     <div className={classes.root} id="/about">
@@ -31,24 +42,15 @@ const About = (props) => {
               <Card.Header>
                 <Nav variant="tabs" defaultActiveKey="#first">
                   <Nav.Item>
-                    <Nav.Link href="about/project">The Project</Nav.Link>
+                    <Nav.Link href="/project">The Project</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link href="about/creator">The Creator</Nav.Link>
+                    <Nav.Link href="/creator">The Creator</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Card.Header>
               <Card.Body>
-                <Router>
-                    <Switch>
-                      <Route exact path="about/project">
-                        <ProjectAbout />
-                      </Route>
-                      <Route exact path="about/creator">
-                        <CreatorAbout />
-                      </Route>
-                    </Switch>
-                  </Router>
+                {changeActiveContent(key)}
               </Card.Body>
             </Card>
           </div>
